@@ -1,27 +1,28 @@
 #include <stdio.h>
-/**
- *main  - entry point
- *
- * return: always 0
- *
- */
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int i, n = 50;
-	int fib1 = 1, fib2 = 2, fib;
+	int i;
+	int fib[50];
 
-	printf("%d, %d", fib1, fib2);
+	fib[0] = 1;
+	fib[1] = 2;
 
-	for (i = 3; i <= n; i++)
+	for (i = 2; i < 50; i++)
 	{
-	 fib = fib1 + fib2;
-
-	printf(", %d", fib);
-	fib1 = fib2;
-	fib2 = fib;
+		fib[i] = fib[i - 1] + fib[i - 2];
 	}
 
-	printf("\n");
+	for (i = 0; i < 49; i++)
+	{
+		printf("%d, ", fib[i]);
+	}
+	printf("%d\n", fib[49]);
+
 	return (0);
 }
