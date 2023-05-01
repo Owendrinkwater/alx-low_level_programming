@@ -8,14 +8,15 @@
  * Return: the number of elements in the listint_t list.
  */
 
-size_t listint_len(const listint_h *h)
+size_t listint_len(const listint_t *h)
 {
 	size_t count = 0;
 
-	while (h != NULL)
+	while (h)
 	{
 		count++;
 		h = h->next;
 	}
+
 	return (count);
 }
