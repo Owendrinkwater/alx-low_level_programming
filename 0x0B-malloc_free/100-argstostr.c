@@ -8,7 +8,7 @@
  * Return: pointer to new string containing all arguments concated
  */
 
-chat *argstostr(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	int i, n, r = 0, l = 0;
 	char *str;
